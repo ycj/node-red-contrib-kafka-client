@@ -1,4 +1,4 @@
-# node-red-contrib-kafka-client
+# @hylink/node-red-kafka-client
 
 This node can be used in order to produce and consume messages to Kafka. It is highly depends on 'kafka-node' library. Consists three nodes.
 
@@ -6,7 +6,7 @@ This node can be used in order to produce and consume messages to Kafka. It is h
 - kafka-producer
 - karka-consumer
 
-Note: This library only supports 'plaintext' and 'tls' authorization. SASL authorization will develop upcoming days
+Note: This library add sasl/plain supports base on node-red-contrib-kafka-client project
 
 ## Input Parameters
 ### kafka-broker
@@ -26,6 +26,13 @@ Private Key path created by openssl (pem)
 Passphrase of created private Key
 #### Self Sign
 Check if want to be allowed untrusted certificates
+
+#### Use SASL
+Check if SASL security is required for Kafka Cluster
+#### SASL Username (Optional)
+SASL Username
+#### SASL Password (Optional)
+SASL Password
 
 ### kafka-producer
 #### Name (Optional)

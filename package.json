@@ -1,5 +1,5 @@
 {
-    "name": "node-red-contrib-kafka-client",
+    "name": "@hylink/node-red-kafka-client",
     "version": "0.2.0",
     "description": "Node-RED Kafka Consumer and Producer",
     "node-red": {
@@ -29,13 +29,13 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/emrebekar/node-red-contrib-kafka-client.git"
+        "url": "https://github.com/ycj/node-red-contrib-kafka-client"
     },
-    "author": "emrebekar",
+    "author": "y.c.j",
     "bugs": {
-        "url": "https://github.com/emrebekar/node-red-contrib-kafka-client/issues"
+        "url": "https://github.com/ycj/node-red-contrib-kafka-client/issues"
     },
-    "homepage": "https://github.com/emrebekar/node-red-contrib-kafka-client/blob/master/README.md",
+    "homepage": "https://github.com/ycj/node-red-contrib-kafka-client/blob/master/README.md",
     "license": "MIT",
     "dependencies": {
         "kafka-node": "^5.0.0"

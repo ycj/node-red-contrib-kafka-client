@@ -18,12 +18,27 @@
     </div>
 
 	<div class="form-row">
+		<input type="checkbox" id="node-config-input-usesasl" style="display: inline-block; width: auto; vertical-align: top;">
+		<label for="node-config-input-usesasl" style="width: auto">Use SASL</label>
+	</div>
+
+	<div id="node-config-sasl" class="form-row">
+		<div class="form-row">
+			<label for="node-config-input-username"><i class="fa fa-tag"></i> Username</label>
+			<input  id="node-config-input-username" type="text" placeholder="username" >
+		</div>
+		<div class="form-row">
+			<label for="node-config-input-password"><i class="fa fa-tag"></i> Password</label>
+			<input  id="node-config-input-password" type="text" placeholder="password" >
+		</div>
+	</div>
+
+	<div class="form-row">
 		<input type="checkbox" id="node-config-input-usetls" style="display: inline-block; width: auto; vertical-align: top;">
 		<label for="node-config-input-usetls" style="width: auto">Use TLS</label>
 	</div>
 	
 	<div id="node-config-tls" class="form-row">
-
 		<div class="form-row">
 			<label for="node-config-input-cacert"><i class="fa fa-tag"></i> CA Cert</label>
 			<input  id="node-config-input-cacert" type="text" placeholder="/var/..." >
@@ -47,20 +62,6 @@
 		<div class="form-row">
 			<input type="checkbox" id="node-config-input-selfsign" style="display: inline-block; width: auto; vertical-align: top;">
 			<label for="node-config-input-selfsign" style="width: auto">Self Sign</label>
-		</div>
-	</div>
-	<div class="form-row">
-		<input type="checkbox" id="node-config-input-usepassword" style="display: inline-block; width: auto; vertical-align: top;">
-		<label for="node-config-input-usepassword" style="width: auto">Use SASL</label>
-	</div>
-	<div id="node-config-password" class="form-row">
-		<div class="form-row">
-			<label for="node-config-input-username"><i class="fa fa-tag"></i> Username</label>
-			<input  id="node-config-input-username" type="text" placeholder="username" >
-		</div>
-		<div class="form-row">
-			<label for="node-config-input-password"><i class="fa fa-tag"></i> Password</label>
-			<input  id="node-config-input-password" type="text" placeholder="password" >
 		</div>
 	</div>
 </script>
@@ -98,24 +99,24 @@
 				}
 			}
 
-			function checkPassowrd(){
-				if (!$("#node-config-input-usepassword").is(':checked')) {
-					$("#node-config-password").hide();
+			function checkSasl(){
+				if (!$("#node-config-input-usesasl").is(':checked')) {
+					$("#node-config-sasl").hide();
 				}
 				else{
-					$("#node-config-password").show();
+					$("#node-config-sasl").show();
 				}
 			}
 
 			checkTls();
-			checkPassowrd();
+			checkSasl();
 
 			$("#node-config-input-usetls").click(function(){
 				checkTls();
 			});
 
-			$("#node-config-input-usepassword").click(function(){
-				checkPassowrd();
+			$("#node-config-input-usesasl").click(function(){
+				checkSasl();
 			});
   		},
   		oneditsave: function() {

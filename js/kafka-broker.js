@@ -20,7 +20,7 @@ module.exports = function(RED) {
                 options.sslOptions.rejectUnauthorized = config.selfsign;
             }
 
-            if(config.usepassword){
+            if(config.usesasl){
                 options.sasl = new Object();
                 options.sasl.mechanism = 'plain';
                 options.sasl.username = config.username;
@@ -30,5 +30,6 @@ module.exports = function(RED) {
             return options;
         }        
     }
+    
     RED.nodes.registerType("kafka-broker",KafkaBrokerNode);
 }

@@ -49,7 +49,20 @@
 			<label for="node-config-input-selfsign" style="width: auto">Self Sign</label>
 		</div>
 	</div>
-	
+	<div class="form-row">
+		<input type="checkbox" id="node-config-input-usepassword" style="display: inline-block; width: auto; vertical-align: top;">
+		<label for="node-config-input-usepassword" style="width: auto">Use Password</label>
+	</div>
+	<div id="node-config-password" class="form-row">
+		<div class="form-row">
+			<label for="node-config-input-username"><i class="fa fa-tag"></i> Username</label>
+			<input  id="node-config-input-username" type="text" placeholder="username" >
+		</div>
+		<div class="form-row">
+			<label for="node-config-input-password"><i class="fa fa-tag"></i> Password</label>
+			<input  id="node-config-input-password" type="text" placeholder="password" >
+		</div>
+	</div>
 </script>
 
 <script type="text/javascript">
@@ -85,10 +98,24 @@
 				}
 			}
 
+			function checkPassowrd(){
+				if (!$("#node-config-input-usepassword").is(':checked')) {
+					$("#node-config-password").hide();
+				}
+				else{
+					$("#node-config-password").show();
+				}
+			}
+
 			checkTls();
+			checkPassowrd();
 
 			$("#node-config-input-usetls").click(function(){
 				checkTls();
+			});
+
+			$("#node-config-input-usepassword").click(function(){
+				checkPassowrd();
 			});
   		},
   		oneditsave: function() {

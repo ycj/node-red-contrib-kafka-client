@@ -20,6 +20,13 @@ module.exports = function(RED) {
                 options.sslOptions.rejectUnauthorized = config.selfsign;
             }
 
+            if(config.usepassword){
+                options.sasl = new Object();
+                options.sasl.mechanism = 'plain';
+                options.sasl.username = config.username;
+                options.sasl.password = config.password;
+            }
+
             return options;
         }        
     }

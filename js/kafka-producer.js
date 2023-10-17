@@ -9,7 +9,7 @@ module.exports = function(RED) {
         node.init = function(){
             let broker = RED.nodes.getNode(config.broker);
 
-            let kafkaClient = new kafka.KafkaClient(broker.getOptions());;
+            let kafkaClient = new kafka.KafkaClient(broker.getOptions());
             
             let producerOptions = new Object();
             producerOptions.requireAcks = config.requireAcks;

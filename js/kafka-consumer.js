@@ -15,7 +15,7 @@ module.exports = function(RED) {
         node.init = function(){
             const kafka = require('kafka-node'); 
 
-            var broker = RED.nodes.getNode(config.broker);        
+            var broker = RED.nodes.getNode(config.broker);
             var options = broker.getOptions();
 
             var topic = config.topic;

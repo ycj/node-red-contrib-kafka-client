@@ -73,12 +73,17 @@
         defaults: {
         	name: {required:false},
         	hosts: {required: true},
-			selfsign: {value: false,required: false},
+
+			usesasl: {value: false},
+			username: {required:false},
+			password: {required:false},
+
 			usetls: {value: false},
 			cacert: {required:false},
 			clientcert: {required:false},
 			privatekey: {required:false},
 			passphrase: {required:false},
+			selfsign: {value: false,required: false}
 		},
 
         label: function() {

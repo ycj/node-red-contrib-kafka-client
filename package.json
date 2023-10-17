@@ -1,6 +1,6 @@
 {
     "name": "@hylink/node-red-kafka-client",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Node-RED Kafka Consumer and Producer",
     "node-red": {
         "nodes": {

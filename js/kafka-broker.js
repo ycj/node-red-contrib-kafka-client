@@ -28,7 +28,7 @@ module.exports = function(RED) {
             }
 
             return options;
-        }        
+        }
     }
     
     RED.nodes.registerType("kafka-broker",KafkaBrokerNode);

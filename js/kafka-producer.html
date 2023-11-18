@@ -42,8 +42,9 @@
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('kafka-producer',{
+    RED.nodes.registerType('producer',{
     	category: 'kafka',
+        color: '#00CED1',
         defaults: {
             name: {required:false},
             broker: {type:"kafka-broker"},

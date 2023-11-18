@@ -1,6 +1,6 @@
 {
     "name": "@hylink/node-red-kafka-client",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "description": "Node-RED Kafka Consumer and Producer",
     "node-red": {
         "version": ">=3.0.0",
@@ -10,9 +10,9 @@
             "kafka-broker": "./js/kafka-broker.js"
         },
         "keywords":[
+            "node-red",
             "kafka-producer",
             "kafka-consumer",
-            "node-red",
             "kafka-broker",
             "kafka-node",
             "big-data",

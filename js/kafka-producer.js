@@ -78,5 +78,5 @@ module.exports = function(RED) {
             node.producer.removeListener('error', node.onError);
         })
     }
-    RED.nodes.registerType("kafka-producer",KafkaProducerNode);
+    RED.nodes.registerType("producer",KafkaProducerNode);
 }
